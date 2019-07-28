@@ -1,71 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-     <!-- Linked in css and bootstrap stylesheet -->
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Linked in css and bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Psychic-Game</title>
 
 </head>
 <!--Wrapping contents in a container-->
 <div class="container">
-<!--This game will include 6 rows, each with 1 column-->
-<body>
-    <!--Row 1-->
-    <div class="row">
-        <!--Row 1/Column 1-->
-        <div class="col-md-12">
-            <h1>The Psychic Game</h1>
-        </div>
-    </div>
+    <!--This game will include 6 rows, each with 1 column-->
+    <script>
+        /*Declaring variables */
+        var w = 0;  /* Wins */
+        var l = 0;  /* Losses */
+        var x = 10; /* Guesses left*/
 
-    <!--Row 2-->
-    <div class="row">
-        <!--Row 2/Column 1-->
-        <div class="col-md-12">
-            <h3>Guess what letter I am thinking of?</h3>
-        </div>
-    </div>
+    </script>
 
-    <!--Row 3-->
-    <div class="row">
-        <!--Row 3/Column 1-->
-        <div class="col-md-12">
-            <h4>Wins:</h4>
-        </div>
-    </div>
+    <body>
+        <!--Header Section-->
+        <header>
+            <!--Row 1-->
+            <div class="row  bg-secondary">
+                <!--Row 1/Column 1-->
+                <div class="col-md-12">
+                    <h1>The Psychic Game</h1>
+                </div>
+            </div>
 
-    <!--Row 4-->
-    <div class="row">
-        <!--Row 4/Column 1-->
-        <div class="col-md-12">
-            <h4>Losses:</h4>
-        </div>
-    </div>
+        </header>
 
-    <!--Row 5-->
-    <div class="row">
-        <!--Row 5/Column 1-->
-        <div class="col-md-12">
-            <h4>Guesses Left:</h4>
-        </div>
-    </div>
+        <!--Wrapping main-content-->
+        <div class="main-content">
+            <!--Row 2-->
+            <div class="row">
+                <!--Row 2/Column 1-->
+                <div class="col-md-12">
+                    <h3>Guess what letter I am thinking of?</h3>
+                </div>
+            </div>
 
-    <!--Row 6-->
-    <div class="row">
-        <!--Row 6/Column 1-->
-        <div class="col-md-12">
-            <h4>Your guessses so far:</h4>
+            <!--Row 3-->
+            <div class="row">
+                <!--Row 3/Column 1-->
+                <div class="col-md-3">
+                    <h4>Wins:</h4>
+                </div>
+                <!-- Row 3/Coumn 2-->
+                <div class="col-md-9 float-left">
+                    <script>
+                        document.write(w);
+                    </script>
+                </div>
+            </div>
+
+            <!--Row 4-->
+            <div class="row">
+                <!--Row 4/Column 1-->
+                <div class="col-md-3">
+                    <h4>Losses:</h4>
+                </div>
+                <!-- Row 4/Coumn 2-->
+                <div class="col-md-9 float-left">
+                    <script>
+                        document.write(l);
+                    </script>
+                </div>
+            </div>
+
+            <!--Row 5-->
+            <div class="row">
+                <!--Row 5/Column 1-->
+                <div class="col-md-3">
+                    <h4>Guesses Left:</h4>
+                </div>
+                <!-- Row 5/Coumn 2-->
+                <div class="col-md-9 float-left">
+                    <script>
+                        document.write(x);
+                    </script>
+                </div>
+            </div>
+
+            <!--Row 6-->
+            <div class="row">
+                <!--Row 6/Column 1-->
+                <div class="col-md-12">
+                    <h4>Your guessses so far:</h4>
+                </div>
+            </div>
+
         </div>
-    </div>
-    
-</body>
+
+
+
+    </body>
 
 </div>
 
