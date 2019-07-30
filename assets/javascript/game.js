@@ -7,6 +7,7 @@ var wins = 0;
 var losses = 0;
 var guesses = 10;
 
+var x = [];
 
 // Create variables that hold references to the places in the HTML to display the outcome.
 
@@ -20,7 +21,8 @@ var guessesText = document.getElementById("guesses-text");
 document.onkeyup = function (event) {
 
     var userGuess = event.key;
-
+    x.push(userGuess);
+    console.log(x);
     var computerGuess = computerChoices[Math.floor(Math.random())];
     console.log(computerGuess);
 
@@ -36,7 +38,7 @@ document.onkeyup = function (event) {
     }
 
     // Display the user and computer guesses, and wins/losses/ties.
-    userChoiceText.textContent = userGuess;
+    userChoiceText.textContent = x.join(",");
     winsText.textContent = wins;
     lossesText.textContent = losses;
     guessesText.textContent = guesses;
