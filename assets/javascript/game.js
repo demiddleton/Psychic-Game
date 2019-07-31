@@ -28,19 +28,17 @@ document.onkeyup = function (event) {
 
     if ((userGuess === computerGuess)) {
         wins++;
-        
+
     }
-    
-        if((userGuess !== computerGuess) || (guesses === 0)) {
+
+    if ((userGuess !== computerGuess) && (guesses === 0)) {
         losses++;
         
-    }            
+    }
     guesses--;
 
-    if (guesses < 0) {
-       return;
-   }
-
+    
+    
     // Display the user and computer guesses, and wins/losses/ties.
     userChoiceText.textContent = x.join(",");
     winsText.textContent = wins;
@@ -48,5 +46,4 @@ document.onkeyup = function (event) {
     guessesText.textContent = guesses;
 
 };
-   
-    
+
