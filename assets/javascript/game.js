@@ -23,19 +23,23 @@ document.onkeyup = function (event) {
     var userGuess = event.key;
     x.push(userGuess);
     console.log(x);
-    var computerGuess = computerChoices[Math.floor(Math.random())];
+    var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
     console.log(computerGuess);
 
     if ((userGuess === computerGuess)) {
         wins++;
-    } else {
+        
+    }
+    
+        if((userGuess !== computerGuess) || (guesses === 0)) {
         losses++;
+        
     }            
     guesses--;
 
     if (guesses < 0) {
-        return;
-    }
+       return;
+   }
 
     // Display the user and computer guesses, and wins/losses/ties.
     userChoiceText.textContent = x.join(",");
@@ -44,3 +48,5 @@ document.onkeyup = function (event) {
     guessesText.textContent = guesses;
 
 };
+   
+    
