@@ -28,12 +28,14 @@ document.onkeyup = function (event) {
 
     if ((userGuess === computerGuess)) {
         wins++;
-
+        guesses = 10;
+        x = [];
     }
 
     if ((userGuess !== computerGuess) && (guesses === 0)) {
         losses++;
-        
+        guesses = 10;
+        x = [];
     }
     guesses--;
 
@@ -46,4 +48,5 @@ document.onkeyup = function (event) {
     guessesText.textContent = guesses;
 
 };
+
 
