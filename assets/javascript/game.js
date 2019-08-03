@@ -16,6 +16,8 @@ var winsText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
 var guessesText = document.getElementById("guesses-text");
 
+var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+    console.log(computerGuess);
 
 // This function is run whenever the user presses a key.
 document.onkeyup = function (event) {
@@ -23,23 +25,22 @@ document.onkeyup = function (event) {
     var userGuess = event.key;
     x.push(userGuess);
     console.log(x);
-    var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-    console.log(computerGuess);
-
+    
     if ((userGuess === computerGuess)) {
         wins++;        
         x = [];
         guesses = 10;
+        computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+        console.log(computerGuess);
     }
-
+    
     if ((userGuess !== computerGuess) && (guesses === 0)) {
         losses++;        
         x = [];
         guesses = 10;
     }
     guesses--;
-
-        
+    
     // Display the user and computer guesses, and wins/losses/ties.
     userChoiceText.textContent = x.join(",");
     winsText.textContent = wins;
