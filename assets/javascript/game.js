@@ -27,20 +27,19 @@ document.onkeyup = function (event) {
     console.log(computerGuess);
 
     if ((userGuess === computerGuess)) {
-        wins++;
-        guesses = 10;
+        wins++;        
         x = [];
+        guesses = 10;
     }
 
     if ((userGuess !== computerGuess) && (guesses === 0)) {
-        losses++;
-        guesses = 10;
+        losses++;        
         x = [];
+        guesses = 10;
     }
     guesses--;
 
-    
-    
+        
     // Display the user and computer guesses, and wins/losses/ties.
     userChoiceText.textContent = x.join(",");
     winsText.textContent = wins;
