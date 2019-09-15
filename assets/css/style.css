@@ -4,6 +4,7 @@ body{
     background-repeat: no-repeat;
     background-size: 100%;
     color: rgb(226, 222, 222);
+    background-blend-mode: luminosity;
     
 }
 
@@ -22,5 +23,8 @@ body{
     margin-bottom: 20px;
 }
 
+#losses-text {
+    color: rgb(110, 6, 6);
+}
 
 
