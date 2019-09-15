@@ -1,8 +1,26 @@
 body{
     height: 100%;
-    background-image: url(https://psychicschool.com/wp-content/uploads/2018/10/READINGS-GRADUATES-PSYCHIC-SCHOOL-270x283.jpg);
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu55s-irQYtUxgLe_YEphUXLbRqioP7TP3Hs_bsk2DLMbmzpNsMg);
     background-repeat: no-repeat;
     background-size: 100%;
+    color: rgb(226, 222, 222);
+    
 }
+
+#gameName {
+    font-size: 48px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#instructions {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#stats, #stats1 {
+    margin-bottom: 20px;
+}
+
 
 
